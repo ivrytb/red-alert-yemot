@@ -13,11 +13,11 @@ export default async function handler(req, res) {
             return res.status(200).json({ message: "אין התרעות כרגע" });
         }
 
-        // 2. בדיקה האם ההתרעה קרתה ממש עכשיו (ב-15 השניות האחרונות)
+        // 2. בדיקה האם ההתרעה קרתה ממש עכשיו (ב-90 השניות האחרונות)
         const now = Math.floor(Date.now() / 1000);
         const alertTime = lastAlert.time;
 
-        if (now - alertTime < 15) {
+        if (now - alertTime < 90) {
             const cities = lastAlert.cities.join(", ");
             const message = `התרעה חדשה ביישובים: ${cities}`;
 
