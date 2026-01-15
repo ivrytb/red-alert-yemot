@@ -1,0 +1,8 @@
+{
+  "name": "red-alert-yemot",
+  "version": "1.0.0",
+  "dependencies": {
+    "red-alerts": "^2.0.0",
+    "axios": "^1.6.0"
+  }
+}
